@@ -1,26 +1,41 @@
 import React from 'react';
 import logo from './logo.svg';
+import Product from './components/Product';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      products: []
+    };
+  }
+  newProduct() {
+    return {
+      creditCardOffering: "None",
+      entitlementPeriod: "None",
+      entitlementType: "None",
+      marketSegment: "None",
+      paymentStatus: "None",
+      productName: "None",
+      promoCode: "None",
+      routeToMarket: "None",
+      subscriptionStatus: "None"
+    }
+  }
+  addProduct() {
+    this.setState({ products: [...this.state.products, this.newProduct()] });
+  }
+  render() {
+    return (
+      <div className="App">
+        {this.state.products.map(v => {
+          return <Product properties={v}/>
+        })}
+        <button onClick={() => this.addProduct()}>Add</button>
+      </div>
+    );
+  }
 }
 
 export default App;

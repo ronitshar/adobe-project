@@ -6,7 +6,9 @@ class PromoCode extends React.Component {
     }
     render() {
         return (
-            <p> {this.props.name} </p>
+            <select>
+                <option>Promo Code</option>
+            </select>
         );
     }
 

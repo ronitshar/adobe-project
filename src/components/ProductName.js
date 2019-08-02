@@ -6,9 +6,9 @@ class ProductName extends React.Component {
     }
     render() {
         return (
-            <div className="productName">
-                <p> {this.props.name} </p>
-            </div>
+            <select>
+                <option>Product name</option>
+            </select>
         );
     }
 

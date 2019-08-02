@@ -6,7 +6,9 @@ class CreditCardOffering extends React.Component {
     }
     render() {
         return (
-            <p> {this.props.name} </p>
+            <select>
+                <option>Credit Card Offering</option>
+            </select>
         );
     }
 

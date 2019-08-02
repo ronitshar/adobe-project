@@ -6,7 +6,9 @@ class MarketSegment extends React.Component {
     }
     render() {
         return (
-            <p> {this.props.name} </p>
+            <select>
+                <option>Market Segment</option>
+            </select>
         );
     }
 

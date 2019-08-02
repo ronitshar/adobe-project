@@ -6,7 +6,9 @@ class RouteToMarket extends React.Component {
     }
     render() {
         return (
-            <p> {this.props.name} </p>
+            <select>
+                <option>Route to Market </option>
+            </select>
         );
     }
 

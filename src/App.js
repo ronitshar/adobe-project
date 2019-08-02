@@ -32,7 +32,7 @@ class App extends React.Component {
         {this.state.products.map(v => {
           return <Product properties={v}/>
         })}
-        <button onClick={() => this.addProduct()}>Add</button>
+        <button className="button" onClick={() => this.addProduct()}>Add</button>
       </div>
     );
   }

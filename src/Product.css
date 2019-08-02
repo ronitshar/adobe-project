@@ -1,7 +1,11 @@
 .product {
-    display: flex;
-    justify-content: center;
     margin: 0 auto;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    padding-bottom: 5%;
+    width: 75%;
+    border-style: solid;
+    border-color: black;
 }
 
 .product > * {
@@ -11,5 +15,11 @@
 .product .productName {
     display: block;
     padding: 0;
-    margin: 0;
+    margin: 30px;
+}
+
+.product .desc {
+    display: flex;
+    justify-content: space-between;
+    
 }

@@ -6,7 +6,9 @@ class SubscriptionStatus extends React.Component {
     }
     render() {
         return (
-            <p> {this.props.name} </p>
+            <select>
+                <option>Subscription Status</option>
+            </select>
         );
     }
 

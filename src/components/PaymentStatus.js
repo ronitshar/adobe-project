@@ -6,7 +6,9 @@ class PaymentStatus extends React.Component {
     }
     render() {
         return (
-            <p> {this.props.name} </p>
+            <select>
+                <option>Payment Status</option>
+            </select>
         );
     }
 

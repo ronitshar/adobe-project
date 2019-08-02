@@ -26,6 +26,11 @@ class App extends React.Component {
   addProduct() {
     this.setState({ products: [...this.state.products, this.newProduct()] });
   }
+  removeProduct() {
+    let currState = this.state.products;
+    currState.pop();
+    this.setState({ products: currState })
+  }
   render() {
     return (
       <div className="App">
@@ -33,6 +38,7 @@ class App extends React.Component {
           return <Product properties={v}/>
         })}
         <button className="button" onClick={() => this.addProduct()}>Add</button>
+        <button className="button" onClick={() => this.removeProduct()}>Remove</button>
       </div>
     );
   }
